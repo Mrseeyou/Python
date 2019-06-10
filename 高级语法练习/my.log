@@ -1,0 +1,5 @@
+2019-05-23 02:57:46,273 - DEBUG - this is debug
+2019-05-23 02:57:46,275 - INFO - this is info
+2019-05-23 02:57:46,275 - WARNING - this is warning
+2019-05-23 02:57:46,275 - ERROR - this is error
+2019-05-23 02:57:46,275 - CRITICAL - this is critical
