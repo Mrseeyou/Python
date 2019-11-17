@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css的三种基本选择器</title>
+    <!-- style 中的注释样式是 /* 内容 */  否则无效 -->
+    <style>
+        /* 标签选择器 通过标签来设置元素的样式 影响范围最大 */
+            /* div{width:100px; height:100px; background-color:green;} */
+
+        /* .类选择器 通过class类名来设置元素的样式 可重名(重复设置) 影响范围可控制 推荐*/
+            .item1{width:100px; height:100px; background-color:red}
+            .item2{width:100px; height:100px; background-color:green;}
+
+        /* #id选择器 通过id属性的值来设置元素的样式  id在html中具有唯一性, 不能重名 影响范围最小*/
+            #box1{width:200px; height:200px; background-color:green}
+            /* border设置边框 三个参数不可少 1边框间距 2样式 3颜色*/
+            #box2{width:100px; height:100px; border:1px solid red;}
+        /* 优先级问题 影响范围越大的 优先级越低 */
+
+    </style>
+</head>
+<body>
+    <div class="item1"></div>
+    <div class="item2"></div>
+    <div class="item1"></div>
+    <div id="box1"></div>
+    <div id="box2"></div>
+</body>
+</html>

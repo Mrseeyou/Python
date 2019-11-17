@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css的外间距</title>
+    <style>
+        div{width:200px; height:200px;}
+
+        .item1{
+        background:green;
+        /* 设置item的底部外间距 */
+        /* 使用方法同 padding(内间距) */
+        margin-bottom:20px;
+
+        /* 设置负值 则反方向移动 可以用于边框合并*/
+        margin-left:-10px;
+        }
+
+        .item2{background: red;
+        /* 设置元素水平居中 */
+        margin:0 auto;
+
+
+
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <!-- 外间距: 元素距离外部元素的间距 -->
+    <div class="item1"></div>
+    <div class="item2"></div>
+</body>
+</html>

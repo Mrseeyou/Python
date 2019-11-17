@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动的特性</title>
+    <style>
+
+        .box1{
+            width:100px;
+            height:100px;
+            background:red;
+        }
+        .box2{
+            width:110px;
+            height:100px;
+            background:green;
+            /* 特性五 浮动元素后面没有浮动元素 会占据浮动元素的位置 */
+            /* 没有浮动的box3内的文字会避开浮动元素 形成文字环绕 */
+            float:left;
+        }
+        .box3{
+            width:120px;
+            height:100px;
+            background:blue;
+        }
+        .wrap{
+            border:1px solid #000;
+            /* 特性六 当元素无法撑开父级元素时 需要清除浮动 */
+            /* 注意: 是给浮动元素的附件添加此属性 */
+            overflow:hidden;
+        }
+        .wrap1{
+            width:100px;
+            height:100px;
+            background:red;
+            float:left;
+        }
+        .wrap2{
+            width:100px;
+            height:100px;
+            background:green;
+            float:left;
+        }
+        .wrap3{
+            width:100px;
+            height:100px;
+            background:blue;
+            float:left;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1">我是1</div>
+    <div class="box2">我是2</div>
+    <div class="box3">我是3</div>
+     <br>
+
+    <div class="wrap">
+        <div class="wrap1"></div>
+        <div class="wrap2"></div>
+        <div class="wrap3"></div>
+    </div>
+
+</body>
+</html>

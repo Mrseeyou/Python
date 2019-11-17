@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件冒泡</title>
+    <script src="jQuery-1.8.3.min.js"></script>
+    <style>
+        .item1{
+            width:400px;
+            height:400px;
+            background:blue;
+        }
+        .item2{
+            width:200px;
+            height:200px;
+            background:green;
+        }
+        .item3{
+            width:100px;
+            height:100px;
+            background:red;
+        }
+    </style>
+</head>
+<body>
+    <div class="item1">
+        <div class="item2">
+            <div class="item3"></div>
+        </div>
+    </div>
+    <script>
+        // 事件冒泡 当点击一个元素是,会触发父级和先辈级同类元素事件
+            // 返回一个false则不会出现此类情况
+        $('.item1').click(function(){
+            $('.item1').css('background','#000');
+            return false;
+        });
+
+        $('.item2').click(function(){
+            $('.item2').css('background','#000');
+            return false;
+        });
+
+        $('.item3').click(function(){
+            $('.item3').css('background','#000');
+            return false;
+        });
+    </script>
+</body>
+</html>

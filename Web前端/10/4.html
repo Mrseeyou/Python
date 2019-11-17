@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js设置元素</title>
+
+</head>
+<body>
+<script>
+    window.onload=function(){
+        // 获取元素对象
+        var oDiv=document.getElementById("item1");
+        console.log(oDiv);
+
+        // js 可以通过style属性来给元素设置样式 因为样式加在行间(优先级高)
+            oDiv.style.width="200px";  //宽度
+            oDiv.style.height="200px"; //高度
+            oDiv.style.background="red"; //颜色
+            oDiv.style.fontSize="50px"; //字体大小 注意:有双拼词的时候把横杆去掉 第二个单词首写大写
+
+        //通过js获取元素的样式 只能获取行间样式 别的地方获取不到
+            console.log(oDiv.style.width);
+
+        // js 操作元素的文本内容
+        //innerHTML 一般用来设置内容 可以解析标签 获取内容时会连同标签一起获取
+            //oDiv.innerHTML='<h1>444</h1>';
+        //innerText 一般用来获取内容 不可以解析标签 只能获取文本不能获取标签
+            oDiv.innerText='333';
+
+        // 表单值的操作
+            v1=document.getElementById("unname");
+
+            //获取表单的值
+            console.log(v1.name)
+
+            //设置表单的值
+            v1.value="321"
+            console.log(v1.value)
+    }
+
+</script>
+<div id="item1" style="">123</div>
+<input type="text" value="123" name="username" id="unname">
+</body>
+</html>

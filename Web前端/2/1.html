@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML常用的行级元素</title>
+    </head>
+    <body>
+            <!--链接标签 a标签: href属性, 跟着是要跳转的网址 target: _blank属性 在新窗口打开跳转的页面-->
+            <!--br是单标签 换行作用-->
+                <a href="http://www.baidu.com">百度(当前页面)</a><br>
+                <a href="http://www.baidu.com" target="_blank">百度(新窗口)</a><br>
+                <a href="./101.html">跳转到本地的文件</a><br>
+                <!--路径问题 在实际开发当中建议使用相对路劲 ./当前目录  ../上级目录-->
+
+            <!--图像标签 img (单标签 不需要闭合)
+                src: 图片的地址(网络资源或者本地资源)
+                alt: 用于图片加载失败的替代文字 (必须存在)
+                title: 鼠标悬停在图片上的提示信息 (可写可不写)
+                width: 设置图片的宽度
+                height: 设置图片的高度
+                注意: 一般只设置宽度或者高度, 图片会按照比例进行缩放, 否则可能拉伸变形
+                -->
+                <img src="http://file03.16sucai.com/2017/1100/16sucai_P59201C191.JPG"
+                     width="500px" title="这是一双黑眼圈" alt="图片加载失败">
+                <!--上面的是引用网络地址, 下面的是引用本地地址-->
+                <img src="../16sucai_P59201C191.JPG" width="500px" alt="图片加载失败"><br>
+
+            <!--文本标签 有语义-->
+                <!--b:加粗  strong:加粗且具有强调意义 i:斜体 em:斜体且具有强调意义-->
+                <b>文本标签</b> <br>
+                <strong>文本标签</strong> <br>
+                <i>文本标签</i> <br>
+                <em>文本标签</em> <br>
+
+            <!--span标签 无语义 一般span标签配合css使用 用来设置文本当中的某一部分内容-->
+                文<span style="color:red">本标</span>签 <br>
+
+            <!--HTML 当中的实体字符 -->
+                1>2; <br>
+                1&gt;2 <br>
+                1<2; <br>
+                1&lt;2 <br>
+                <a href="http://www.w3school.com.cn/html/html_entities.asp">HTML当中常用的字符实体</a> <br>
+
+
+
+
+
+
+    </body>
+</html>

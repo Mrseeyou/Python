@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>元素特点</title>
+    <style>
+        .box1{
+            width:100px;
+            height:100px;
+            background:green;
+            border:2px solid red;
+            padding:10px;
+            margin:10px;
+
+        }
+        span{
+        /* 设置的宽高不生效 由内容决定 margin值只支持左右 */
+            width:100px;
+            height:100px;
+            background:green;
+            border:2px solid red;
+            padding:5px;
+            margin:5px;
+        }
+        .box2{
+            width:100px;
+            height:100px;
+            background:red;
+            margin:20px;
+            text-align:center;
+            line-height:100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">这是块元素</div>
+    <span>这是内联元素</span>
+    内联元素不独占一行,代码换行只产生间距
+    <div class="box2"><b>设置对齐</b></div>
+</body>
+</html>

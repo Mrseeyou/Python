@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>父子级选择器</title>
+    <script src="./jQuery-1.11.1.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="int">
+            <div class="item1">item1</div>
+        <div class="item2">item2</div>
+        <div class="item3">item3</div>
+        </div>
+
+    </div>
+    <script>
+        // 检测引入是否成功
+        <!--console.log($)-->
+
+// 通过父元素找子元素
+
+        // 通过父级元素获取所有子元素 返回一个数组
+        console.log($('.wrap').children());
+
+        // 获取父元素的第一个子元素 最后一个子元素
+        console.log($('.wrap div:first-child'))
+        console.log($('.wrap div:last-child'))
+
+        // 获取指定的子元素 从1开始
+        console.log($('.wrap div:nth-child(2)'))
+
+        // 在父级元素中查找指定的子元素 如果不指定子元素 获取不到
+        console.log($('.wrap').find('.int'));
+
+
+// 获取同级元素
+
+        // 获取元素上一个同级元素 下一个同级元素
+        console.log($('.item2').prev())
+        console.log($('.item2').next())
+
+        // 获取同辈元素
+        console.log($('.item1').siblings())
+
+// 通过子元素找父元素
+
+        // 获取父级元素
+        console.log($('.item1').parent())
+
+        // 获取先辈级元素 如果不指定 则获取所有父级元素
+        console.log($('.item1').parents())
+
+
+
+    </script>
+</body>
+</html>

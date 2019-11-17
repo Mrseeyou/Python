@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>event事件对象</title>
+    <script src="./jQuery-1.8.3.min.js"></script>
+    <style>
+        div{
+            width:200px;
+            height:200px;
+            background:red;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        // event 事件对象 通过此对象可以获得
+        $('div').click(function(e){
+            console.log('单击事件触发')
+            // 获取相对于窗口的坐标
+            console.log(e.clientX,e.clientY)
+            // 获取相对于文档的坐标
+            console.log(e.pageX,e.pageY)
+        })
+
+        // 获取移动鼠标的坐标
+            $('div').mousemove(function(e){
+                console.log(e.clientX,e.clientY);
+            });
+
+    </script>
+</body>
+</html>

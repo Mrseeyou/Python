@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>随机数</title>
+</head>
+<body>
+    <script>
+        // 取0~1之间的随机数 永远取不到1
+            var res = Math.random();
+            console.log(res);
+
+        // 取0~10之间的随机数
+            var res1 = Math.random()*10;
+            console.log(res1);
+
+        // 取0~10之间的随机整数
+            // 因为Math.random()到不了1 而且是向下取整 所以乘以11
+            var res2 = Math.floor(Math.random()*11);
+            console.log(res2);
+
+        // 取10~20之间的随机整数
+            // 根据上一个式子 可以得出以下式子
+            var res3 = Math.floor(Math.random()*11)+ 10;
+            console.log(res3);
+
+        // 取m~n之间的随机整数
+            // 根据上两个式子 可以得出以下式子
+            function ran(m,n){
+                return Math.floor(Math.random()*(n-m+1))+m;
+            }
+            var res4=ran(50,60);
+            console.log(res4);
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>阴影效果</title>
+    <style>
+        .box{
+        width:200px; height:200px;
+        border:3px solid blue;
+
+        /*
+        设置阴影
+            第一个值为x轴水平方向 如果是负值则往左
+            第二个值为y轴垂直方向 如果是负值则往下
+            第三个值为模糊的
+            第四个值为扩散程度
+            第五个值为阴影颜色
+            第六个值为内阴影 不写则为外阴影
+            box-shadow:10px -10px 20px 5px #ffa0aa inset;
+        可设置伪类选择器
+        */
+        }
+        .box:hover{box-shadow:10px 10px 20px 10px #ccc}
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

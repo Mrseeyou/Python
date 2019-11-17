@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定位</title>
+    <style>
+        /*首先清除默认边距 否则不好做对比 默认边距是8px */
+        *{margin:0;padding:0;}
+
+        .box1{
+            width:200px;
+            height:200px;
+            background:red;
+            margin:20px;
+            /* 相对定位 相对于本身的位置进行偏移 不会脱离文档流 原来占据的位置还在*/
+            position:relative;
+            left:100px;
+            top:100px;
+        }
+
+        .box2{
+            width:200px;
+            height:200px;
+            background:green;
+            margin:20px;
+            /* 绝对定位 相对于父级元素进行偏移 脱离文档流 不占据原来的位置 */
+            /* 因为box2的父级元素没有 所以相对body位置进行偏移 设置的值一样 所以跟box1重合*/
+            position:absolute;
+            left:100px;
+            top:100px;
+        }
+
+        .box3{
+            width:70px;
+            height:20px;
+            background:blue;
+            margin:20px;
+            /* 绝对定位 相对浏览器窗口进行偏移 脱离文档流 不占据原来的位置 */
+            position:fixed;
+            right:20px;
+            bottom:20px;
+        }
+
+        /* 为了确认绝对定位的作用 给页面设置一个高度 */
+        .box{
+        height:5000px;
+        }
+
+        /* 定位元素的层级:定位元素是浮动在正常的文档流之上的 如box2在box1之上 */
+        /* 可以通过属性来设置层级 */
+        /* 先定位的会被覆盖 后定位的覆盖先定位的 可以通过数字调节层级关系 */
+        .box1{ z-index:2;}
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">返回顶部</div>
+    </div>
+
+</body>
+</html>

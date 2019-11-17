@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组</title>
+</head>
+<body>
+    <script>
+        // 1.定义一个数组
+        var arr =new Array(1,2,3);
+        console.log(arr);
+
+        var arr1 = ['1',2,3,6];
+        console.log(arr1);
+
+        // 获取数组的长度
+            <!--console.log(arr1.length);-->
+        // 索引
+            <!--console.log(arr1[0]);-->
+        // 修改值
+            <!--arr1[0]=9;-->
+            <!--console.log(arr1);-->
+        // 在数组最后添加或删除成员
+            <!--arr1.push(5,6,7)-->
+            <!--console.log(arr1)-->
+            <!--arr1.pop()-->
+            <!--console.log(arr1)-->
+        // 在数组前面添加或删除成员
+            <!--arr1.unshift(0,1,2)-->
+            <!--console.log(arr1)-->
+            <!--arr1.shift()-->
+            <!--console.log(arr1)-->
+        // 在数组中删除或替换元素
+            // 传一个参数a 代表从第a个元素开始 之后的元素全部删除
+            <!--arr1.splice(2)-->
+            <!--console.log(arr1)-->
+            // 传两个参数a,b 代表从第a个元素开始 之后的元素删除b个
+            <!--arr1.splice(2,1)-->
+            <!--console.log(arr1)-->
+            // 传三个参数a,b,c 代表从第a个元素开始 之后的元素删除b个 用c元素在删除的地方替代(c可以是多个元素)
+            arr1.splice(1,1, 11,22,33)
+            console.log(arr1)
+        // 多维数组
+            <!--var arr2=[1,2,3,['1','2','3'],['a','b','c']]-->
+            // 索引'b'
+            <!--console.log(arr2[4][1])-->
+
+
+
+
+    </script>
+</body>
+</html>

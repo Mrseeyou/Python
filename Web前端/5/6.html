@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景样式</title>
+    <style>
+        .box{
+            width:200px; height:200px;
+            background:green;
+            border:1px solid red;
+
+            /*
+            设置背景颜色 如果是-color 就只能设置颜色
+            background-color:red;
+
+            设置背景图片
+            background-image:url(../16sucai_P59201C191.JPG);
+
+            设置背景图片大小 可用px值
+            background-size:100% 100%;
+
+            设置图片或者元素偏移 往左往上是负值 往右往下是正值
+            background-position:-690px -200px;
+
+            设置图片是否重复平铺
+            background-repeat:no-repeat;
+
+            组合写法:图片url x坐标 y坐标 是否平铺 颜色
+                坐标可用px % top bottom left right 表示
+                只写一个坐标则值为x坐标 且y坐标默认居中
+            */
+            background:url(../689.png) center  green no-repeat;
+
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

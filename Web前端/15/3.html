@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>常用的鼠标事件</title>
+    <script src="./jQuery-1.8.3.min.js"></script>
+    <style>
+        div{
+            width:200px;
+            height:200px;
+            background:green;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+
+    <script>
+        // 鼠标按下事件 鼠标按下时触发
+        $('div').mousedown(function(){
+            console.log('鼠标按下事件触发');
+            $('div').css('background','#123');
+        });
+
+        // 鼠标抬起事件 鼠标抬起时触发
+        $('div').mouseup(function(){
+            console.log('鼠标抬起事件触发');
+            $('div').css('background','#f0f');
+        });
+
+        // 鼠标移入事件 鼠标移动到元素时触发
+        $('div').mouseover(function(){
+            console.log('鼠标移入事件触发');
+            $('div').css('background','red');
+        });
+
+        // 鼠标移出事件 鼠标移出元素时触发
+        $('div').mouseout(function(){
+            console.log('鼠标移出事件触发');
+            $('div').css('background','green');
+        });
+
+        // 鼠标移动事件
+        $('div').mousemove(function(){
+            console.log('只要在元素内移动就一直触发')
+        });
+    </script>
+</body>
+</html>

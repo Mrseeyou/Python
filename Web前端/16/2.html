@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>节点操作</title>
+    <script src="./jQuery-1.8.3.min.js"></script>
+    <style>
+        *{margin:0;padding:0}
+        .wrap{
+            width:800px;
+            height:600px;
+            border:1px solid red;
+        }
+        .item1{
+            width:100px;
+            height:100px;
+            background:green;
+            border-radius:50%;
+            float:left;
+        }
+    </style>
+</head>
+<body>
+    <button>在元素内部尾部插入元素</button>
+    <button>在元素内部头部插入元素</button>
+    <button>在元素的外部的尾部插入元素</button>
+    <button>在元素的外部的头部插入元素</button>
+    <button>删除节点</button>
+    <button>清空</button>
+    <button>克隆</button>
+    <button>注意</button>
+    <div class="wrap"></div>
+    <script>
+        var oDiv=null;
+        // 给第一个按钮绑定事件
+        $('button').eq(0).click(function(){
+            // 调用新建元素
+            creatDiv();
+            // 在指定元素的内部尾部添加元素  (正序)
+            <!--$('.wrap').append(oDiv);-->
+            // 将元素插入到指定的元素的内部
+            oDiv.appendTo($('.wrap')) ;
+
+        });
+        // 给第二个按钮绑定事件
+        $('button').eq(1).click(function(){
+            creatDiv();
+            // 在指定元素内部的头部添加元素 (反序)
+            <!--$('.wrap').prepend(oDiv);-->
+            // 将元素添加到指定元素的内部的头部
+            oDiv.prependTo($('.wrap'));
+          });
+
+        // 给第三个按钮绑定事件
+        $('button').eq(2).click(function(){
+            creatDiv();
+            // 在指定元素外部的后面插入元素 (反序)
+            <!--$('.wrap').after(oDiv);-->
+            // 将元素插入到指定元素外部的尾部
+            oDiv.insertAfter($('.wrap'));
+        });
+
+        // 给第四个按钮绑定事件
+        $('button').eq(3).click(function(){
+            creatDiv();
+            // 在指定元素外部的前面插入元素  (正序)
+            <!--$('.wrap').before(oDiv);-->
+            // 将元素插入到指定元素外部的前面
+            oDiv.insertBefore($('.wrap'));
+
+        });
+
+        // 删除节点
+        $('button').eq(4).click(function(){
+            $('body').remove(); // 删除指定内容
+        });
+
+        // 清空
+        $('button').eq(5).click(function(){
+            $('button').empty() // 清空指定元素内部的内容
+        });
+
+        // 克隆元素 不传参数true 则克隆的内的事件不生效
+            $('button').eq(6).click(function(){
+                var newBtn=$('button').eq(6).clone(true);
+                $('.wrap').before(newBtn)
+            });
+
+        // 节点操作注意事项
+            // 在插入(移动)元素之前,要先进行克隆操作,否则会把原来的元素拿走
+            $('button').eq(7).click(function(){
+                <!--$('.wrap').append($('button').eq(0));-->
+                $('.wrap').append($('button').eq(0).clone(true));
+            });
+
+
+        // 定义随机函数
+        function ran(m,n){
+            return Math.floor(Math.random()*(n-m+1))+m
+        }
+
+        // 定义新建元素的函数
+        function creatDiv(){
+            oDiv=$('<div class="item1"></div>');
+            oDiv.css('background','rgb('+ran(0,255)+','+ran(0,255)+','+ran(0,255)+')')
+        }
+
+
+
+
+
+    </script>
+</body>
+</html>

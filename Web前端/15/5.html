@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>元素的默认行为</title>
+    <script src="jQuery-1.8.3.min.js"></script>
+</head>
+<body>
+    <a href="https://www.baidu.com" target="_blank">百度</a>
+    <script>
+        $('a').click(function(){
+            alert('不跳转了');
+            return false;
+        });
+    </script>
+</body>
+</html>

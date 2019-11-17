@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件的绑定</title>
+    <script src="./jQuery-1.11.1.min.js"></script>
+    <style>
+        .item1{
+            width:100px;
+            height:100px;
+            background:red;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // 因为页面从上往下加载 所有此代码获取不到item1
+        console.log($('.item1'));
+
+        // 当页面加载完成之后触发ready
+        $(document).ready(function(){
+            console.log($('.item1'));
+        });
+        // 当文档加载完成之后自动调用自己 相当于上一个代码的简写
+        $(function(){
+            console.log($('.item1'));
+        });
+    </script>
+    <div class="item1"></div>
+    <script>
+        // 基本的时间绑定
+        // 元素对象.onclick=function(){}  原生js
+
+        // 给item1 绑定事件
+            <!--$('.item1').click(function(){-->
+                <!--alert('单击时触发的事件');-->
+            <!--});-->
+
+
+        // 方法绑定 bind on
+            $('.item1').bind('click',function(){
+                console.log('事件触发了');
+            });
+
+            <!--$('.item1').on('click',function(){-->
+                <!--alert('触发了');-->
+            <!--});-->
+
+        // 绑定双击事件
+                $('.item1').dblclick(function(){
+                    console.log('双击事件');
+                });
+
+        // 解除绑定 如果不指定解除事件 那么就会解除元素上的所有事件
+            $('.item1').unbind('dblclick');
+
+
+
+
+
+    </script>
+</body>
+</html>

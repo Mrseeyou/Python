@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基础和过滤获取选择器</title>
+    <style>
+        #item1{
+            width:200px;
+            height:200px;
+            background:red;
+        }
+    </style>
+    <script src="./jQuery-1.11.1.min.js"></script>
+</head>
+<body>
+    <div id="item1">jQuery选择器的使用</div>
+    <ul>
+        <li class="box1">1</li>
+        <li class="box2">2</li>
+        <li class="box3">3</li>
+    </ul>
+
+<script>
+    // 检测jQuery库文件是否引入成功
+    <!--console.log($)-->
+
+    // 通过id来获取元素对象
+    console.log($('#item1'));
+    // 通过标签来获取元素对象
+    console.log($('div'));
+    // 通过类来获取元素对象
+    console.log($('.item1'));
+
+    // 查找页面当中的第一个li元素和最后一个li元素
+    console.log($('li:first'));
+    console.log($('li:last'));
+
+    // 获取页面当中指定的li元素
+    console.log($('li').eq(1));
+    console.log($('li:eq(1)'));
+
+    // 获取元素内的字符来查找元素
+    console.log($('li:contains(1)'))
+
+    // 通过元素的指定属性来获取元素
+    console.log($('li[class=box3]'))
+
+</script>
+</body>
+</html>

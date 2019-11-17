@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax</title>
+    <script src="./jQuery-1.8.3.min.js"></script>
+
+</head>
+<body>
+    <button>$.get</button>
+    <button>$.post</button>
+    <button>$.ajax</button>
+    <script>
+        $('button').eq(0).click(function(){
+            // 绑定事件 触发后向后台请求或发送数据
+            // 第一个参数: 请求地址
+            // 第二个参数: 要发送的数据
+            // 第三个参数: 请求成功后执行的函数
+            // data: 形参 用来接收后端给我们返回的数据
+            // 第四个参数: 指定返回数据的类型
+            // 注意: 如果后台返回的数据不是指定的数据类型 那么就不会接受
+            $.get('./cgi-bin/1.py',{username:'zhangsan',age:18},function(data){
+            console.log(data);
+            },'json');
+        });
+
+        $('button').eq(1).click(function(){
+            // 形如 $.get
+            $.post('./cgi-bin/1.py',{username:'lisi',age:26},function(data){
+            console.log(data);
+            },'json');
+        });
+
+        $('button').eq(2).click(function(){
+            var i=1;
+            $.ajax({
+                url:'./cgi-bin/1.py',                    // 第一个参数  请求地址
+                type:'get',                              // 第二个参数  请求方式
+                data:{username:'wangwu',age:60},         // 第三个参数  请求时 携带的参数
+                dataType:'json',                         // 第四个参数  返回的数据类型
+                success:function(da){                    // 第五个参数  请求成功后调用的参数
+                    console.log(da);
+                    i++;
+                },
+                error:function(){                        // 第六个参数  请求失败后调用的参数
+                    console.log('ajax执行错误');
+                },
+                timeout:2000,                            // 第七个参数 设置请求响应的超时时间
+                async:false,                              // 第八个参数 true为异步 false为同步 默认为异步
+
+            });
+            console.log(i);
+        });
+    </script>
+</body>
+</html>

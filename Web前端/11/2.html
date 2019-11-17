@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画</title>
+    <style>
+
+        #item1{ width:50px; height:50px; background:green;}
+
+    </style>
+
+</head>
+<body>
+    <div id="item1"></div>
+
+    <script>
+        // 获取元素
+        var oDiv=document.getElementById("item1");
+
+        // 启动循环定时器
+        var i=50;
+        var set=setInterval(function(){
+            i++;
+            oDiv.style.width=i+"px";
+            oDiv.style.height=i+"px";
+           // 设置条件 达到条件后执行清除定时器
+            <!--if (i==200){-->
+                <!--clearInterval(set);-->
+            <!--};-->
+
+        },20);
+        // 设置时间 多少S后执行清除定时器
+       setTimeout(function(){
+            console.log("清除定时器启动")
+            clearInterval(set);
+       },5000);
+
+
+    </script>
+</body>
+</html>

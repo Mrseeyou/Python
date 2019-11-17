@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>键盘事件</title>
+    <script src="jQuery-1.8.3.min.js"></script>
+    <style>
+        div{
+            width:200px;
+            height:200px;
+            background:blue;
+            position:absolute;
+        }
+    </style>
+</head>
+<body>
+    <div>123</div>
+    <script>
+        // 键盘按下事件 keydown
+        <!--$(window).keydown(function(){-->
+            <!--alert('1');-->
+        <!--});-->
+
+        var T=8;
+        var L=8;
+
+        // 获取按键信息 a 65 w 87 s 83 d 68(键盘对应的)
+        $(window).keydown(function(e){
+            //console.log(e.keyCode)
+            var stp = e.keyCode;
+
+            // 判断按下的键是哪个 而后用css的方法设置元素的坐标
+            if(stp==65){
+                L-=5;
+                console.log('x坐标'+T);
+                $('div').css('left',L+'px');
+            }else if(stp==87){
+                T-=5;
+                console.log('y坐标'+T);
+                $('div').css('top',T+'px');
+            }else if(stp==83){
+                T+=5;
+                console.log('y坐标'+T);
+                $('div').css('top',T+'px');
+            }else if(stp==68){
+                L+=5;
+                console.log('x坐标'+L);
+                $('div').css('left',L+'px');
+            }
+        });
+    </script>
+</body>
+</html>

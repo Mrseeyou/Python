@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js定时器</title>
+</head>
+<body>
+<script>
+/*
+        1.单次定时器 setTimeout
+            格式:setTimeout(回调函数,时间(毫秒))
+            只执行一次
+            清除单次定时器: clearTimeout(要清除的定时器的标识符)
+        2.循环定时器 setInterval()
+            格式:setInterval(回调函数,时间(毫秒))
+            清除定时器: 启动定时器之后,会返回一个标识符,通过标识符来清除定时器
+            清除循环定时器: clearInterval(要清除定时器的标识符)
+
+*/
+<!--单次定时器方法一:-->
+        function demo(){
+            console.log("定时器执行了");
+        }
+        setTimeout(demo,3000);
+
+<!--单次定时器方法二:-->
+        setTimeout(function(){
+            console.log("单次定时器启动了");
+    },3000);
+
+<!--循环定时器-->
+        var set=setInterval(function(){
+            console.log("循环定时器启动了");
+        },3000);
+        console.log(set);
+
+        setTimeout(function(){
+            //清除定时器
+            console.log("清除定时器启动了")
+            clearInterval(set);
+        },10000)
+
+
+</script>
+
+</body>
+</html>

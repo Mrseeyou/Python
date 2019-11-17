@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动的特性</title>
+    <style>
+        .item{
+            width:300px;
+            height:200px;
+            border:1px solid #000;
+            }
+        .box1{
+            width:100px;
+            height:100px;
+            background:red;
+            /* 特性一 特性二box1向左浮动 碰到边界停止*/
+            float:left;
+            }
+        .box2{
+            width:110px;
+            height:100px;
+            background:green;
+            /* 特性四 box2向左浮动后 碰到浮动元素停止 */
+            float:left;
+           }
+        .box3{
+            width:120px;
+            height:100px;
+            background:blue;
+            /* 特性三 box3 相邻浮动元素可以并在一行, 超出父级宽度就换行 */
+            float:left;
+            }
+    </style>
+</head>
+<body>
+    <div class="item">
+         <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+    </div>
+
+</body>
+</html>
+
+

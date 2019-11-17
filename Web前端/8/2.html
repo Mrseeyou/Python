@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>媒体查询</title>
+    <style>
+
+        div{width:100%; height:100px; background:green;}
+
+        /* 当浏览器窗口小于等于960px时 触发函数 */
+        @media (max-width:960px){
+            div{background:blue;}
+        }
+
+        /* 当浏览器窗口小于等于640px时 触发函数 */
+        @media(max-width:640px){
+            div{background:red;}
+        }
+
+
+        /* 也可以设置小于等于 用 min */
+
+
+    </style>
+</head>
+<body>
+    <div>响应式布局</div>
+</body>
+</html>
