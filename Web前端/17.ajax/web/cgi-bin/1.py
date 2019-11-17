@@ -14,7 +14,7 @@ for key in fs.keys():
 # 给用户返回数据
 # print(inputs)
 
-# time.sleep(3)
+# time.sleep(3.控件)
 
 # 转换成json格式的数据
 print(json.dumps(inputs))
